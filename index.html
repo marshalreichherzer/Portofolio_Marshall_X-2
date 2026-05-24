@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Muhammad Marshal Reichherzer Putra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root{
+      --primary:#4f6797;
+      --primary-dark:#3f557f;
+      --bg:#f3f3f3;
+      --card:#ffffff;
+      --text:#2f3b4d;
+      --muted:#7c8798;
+      --border:#d7dce3;
+      --radius:22px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+
+    img{
+      width:100%;
+      display:block;
+    }
+
+    a{
+      text-decoration:none;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    section{
+      padding:100px 0;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:999;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-wrapper{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:1rem;
+      font-weight:700;
+      color:var(--primary);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:30px;
+      list-style:none;
+    }
+
+    .nav-links a{
+      color:var(--muted);
+      font-weight:500;
+      transition:.3s;
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+    }
+
+    .hero-wrapper{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:70px;
+      align-items:center;
+    }
+
+    .hero-text h3{
+      color:var(--primary);
+      margin-bottom:15px;
+      letter-spacing:2px;
+      font-size:1rem;
+    }
+
+    .hero-text h1{
+      font-size:5rem;
+      line-height:1.05;
+      margin-bottom:25px;
+      font-weight:800;
+      color:#9ca3af;
+      text-transform:uppercase;
+    }
+
+    .hero-text p{
+      color:var(--muted);
+      margin-bottom:35px;
+      font-size:1.05rem;
+      max-width:600px;
+    }
+
+    .buttons{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border-radius:15px;
+      font-weight:600;
+      transition:.3s;
+      display:inline-block;
+    }
+
+    .btn-primary{
+      background:var(--primary);
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:var(--primary-dark);
+      transform:translateY(-3px);
+      box-shadow:var(--shadow);
+    }
+
+    .btn-outline{
+      border:2px solid var(--primary);
+      color:var(--primary);
+    }
+
+    .btn-outline:hover{
+      background:var(--primary);
+      color:white;
+    }
+
+    .hero-image{
+      display:flex;
+      justify-content:center;
+    }
+
+    .hero-image img{
+      width:360px;
+      height:360px;
+      object-fit:cover;
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+
+    /* SECTION TITLE */
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:2.7rem;
+      margin-bottom:10px;
+      color:var(--primary);
+    }
+
+    .section-title p{
+      color:var(--muted);
+    }
+
+    /* CARD */
+
+    .card,
+    .skill-card,
+    .timeline-content,
+    .language-card,
+    .contact-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:0 5px 20px rgba(0,0,0,.04);
+      transition:.4s;
+    }
+
+    .card:hover,
+    .skill-card:hover,
+    .timeline-content:hover,
+    .language-card:hover,
+    .contact-card:hover{
+      transform:translateY(-6px);
+      border-color:var(--primary);
+    }
+
+    /* ABOUT */
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:30px;
+    }
+
+    .card{
+      padding:35px;
+    }
+
+    .card h3{
+      margin-bottom:20px;
+      color:var(--primary);
+    }
+
+    .card p{
+      color:var(--muted);
+    }
+
+    .info-list{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .info-item{
+      color:var(--muted);
+    }
+
+    .info-item span{
+      color:var(--text);
+      font-weight:700;
+    }
+
+    /* SKILLS */
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .skill-card{
+      padding:35px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      min-height:320px;
+    }
+
+    .skill-card h3{
+      margin-bottom:25px;
+      color:var(--primary);
+      text-align:center;
+    }
+
+    .skill{
+      margin-bottom:20px;
+    }
+
+    .skill-name{
+      display:flex;
+      justify-content:space-between;
+      margin-bottom:8px;
+      color:var(--muted);
+    }
+
+    .bar{
+      width:100%;
+      height:10px;
+      background:#e5e7eb;
+      border-radius:20px;
+      overflow:hidden;
+    }
+
+    .fill{
+      height:100%;
+      background:var(--primary);
+    }
+
+    .activity-list{
+      text-align:center;
+      color:var(--muted);
+    }
+
+    .activity-list p{
+      margin-bottom:18px;
+    }
+
+    /* EDUCATION */
+
+    .timeline{
+      position:relative;
+      margin-top:50px;
+    }
+
+    .timeline::before{
+      content:'';
+      position:absolute;
+      left:50%;
+      width:2px;
+      height:100%;
+      background:var(--border);
+      transform:translateX(-50%);
+    }
+
+    .timeline-item{
+      width:50%;
+      padding:20px 40px;
+      position:relative;
+    }
+
+    .timeline-item:nth-child(odd){
+      left:0;
+      text-align:right;
+    }
+
+    .timeline-item:nth-child(even){
+      left:50%;
+    }
+
+    .timeline-content{
+      padding:28px;
+    }
+
+    .school-box{
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+
+    .school-logo{
+      width:100px;
+      height:100px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+      flex-shrink:0;
+      border:2px solid var(--border);
+      border-radius:20px;
+      background:white;
+      padding:12px;
+      transition:.3s;
+    }
+
+    .school-logo:hover{
+      border-color:var(--primary);
+      transform:scale(1.05);
+    }
+
+    .school-logo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+
+    .school-info{
+      flex:1;
+    }
+
+    .school-info h3{
+      color:var(--primary);
+      margin-bottom:10px;
+    }
+
+    .school-info p{
+      color:var(--muted);
+    }
+
+    /* LANGUAGES */
+
+    .language-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+    }
+
+    .language-card{
+      padding:35px;
+      text-align:center;
+    }
+
+    .language-card h3{
+      margin-bottom:12px;
+    }
+
+    .language-card p{
+      color:var(--muted);
+    }
+
+    /* HOBBIES */
+
+    .hobbies{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .hobby{
+      padding:18px 35px;
+      border-radius:20px;
+      background:white;
+      border:1px solid var(--border);
+      color:var(--muted);
+      transition:.3s;
+    }
+
+    .hobby:hover{
+      transform:translateY(-5px);
+      border-color:var(--primary);
+      color:var(--primary);
+    }
+
+    /* CONTACT */
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+    }
+
+    .contact-card{
+      padding:35px;
+      text-align:center;
+    }
+
+    .contact-card h3{
+      margin-bottom:16px;
+      color:var(--primary);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+    }
+
+    .contact-card p{
+      color:var(--muted);
+    }
+
+    /* FOOTER */
+
+    footer{
+      padding:40px 0;
+      border-top:1px solid var(--border);
+      text-align:center;
+      color:var(--muted);
+    }
+
+    /* ANIMATION */
+
+    .fade{
+      opacity:0;
+      transform:translateY(30px);
+      transition:1s;
+    }
+
+    .fade.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+      .hero-wrapper{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .hero-text h1{
+        font-size:3rem;
+      }
+
+      .hero-image img{
+        width:260px;
+        height:260px;
+      }
+
+      .about-grid{
+        grid-template-columns:1fr;
+      }
+
+      .timeline::before{
+        left:10px;
+      }
+
+      .timeline-item{
+        width:100%;
+        left:0 !important;
+        text-align:left !important;
+        padding-left:40px;
+        padding-right:0;
+      }
+
+      .nav-links{
+        display:none;
+      }
+
+      .school-box{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav>
+
+    <div class="container nav-wrapper">
+
+      <div class="logo">
+        Muhammad Marshal Reichherzer Putra
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#languages">Languages</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    </div>
+
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container hero-wrapper fade">
+
+      <div class="hero-text">
+
+        <h3>STUDENT • MULTILINGUAL • ACTIVE LEARNER</h3>
+
+        <h1>
+          Muhammad Marshal
+          <br>
+          Reichherzer Putra
+        </h1>
+
+        <p>
+          Active student with leadership experience in student council,
+          multicultural background, and strong interests in sports,
+          videography, teamwork, and technology.
+        </p>
+
+        <div class="buttons">
+
+          <a href="#about" class="btn btn-primary">
+            About Me
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-image">
+        <img src="https://i.ibb.co/mgH6JNK/whatsappimage.jpg" alt="Marshal">
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-title fade">
+        <h2>About Me</h2>
+        <p>Personal profile and background</p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="card fade">
+
+          <h3>Profile</h3>
+
+          <p>
+            I was a member of Student Council (OSIS) during middle school,
+            where I developed leadership, teamwork,
+            and organizational skills through school activities and events.
+          </p>
+
+          <br>
+
+          <p>
+            Born in Germany and currently living in Indonesia,
+            I have a multicultural background and adaptive mindset
+            in diverse environments.
+          </p>
+
+        </div>
+
+        <div class="card fade">
+
+          <h3>Personal Information</h3>
+
+          <div class="info-list">
+
+            <div class="info-item">
+              <span>Full Name:</span>
+              Muhammad Marshal Reichherzer Putra
+            </div>
+
+            <div class="info-item">
+              <span>Date of Birth:</span>
+              08 June 2010
+            </div>
+
+            <div class="info-item">
+              <span>Place of Birth:</span>
+              Ingolstadt, Germany
+            </div>
+
+            <div class="info-item">
+              <span>Nationality:</span>
+              Indonesian
+            </div>
+
+            <div class="info-item">
+              <span>Location:</span>
+              Bogor, Indonesia
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title fade">
+        <h2>Skills</h2>
+        <p>Abilities and competencies</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card fade">
+
+          <h3>Professional Skills</h3>
+
+          <div class="skill">
+
+            <div class="skill-name">
+              <span>Microsoft Office</span>
+              <span>85%</span>
+            </div>
+
+            <div class="bar">
+              <div class="fill" style="width:85%"></div>
+            </div>
+
+          </div>
+
+          <div class="skill">
+
+            <div class="skill-name">
+              <span>Basketball</span>
+              <span>80%</span>
+            </div>
+
+            <div class="bar">
+              <div class="fill" style="width:80%"></div>
+            </div>
+
+          </div>
+
+          <div class="skill">
+
+            <div class="skill-name">
+              <span>Videography</span>
+              <span>70%</span>
+            </div>
+
+            <div class="bar">
+              <div class="fill" style="width:70%"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="skill-card fade">
+
+          <h3>Activities</h3>
+
+          <div class="activity-list">
+
+            <p>• Student Council (OSIS)</p>
+
+            <p>• Event Organization</p>
+
+            <p>• Leadership Development</p>
+
+            <p>• Team Collaboration</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EDUCATION -->
+
+  <section id="education">
+
+    <div class="container">
+
+      <div class="section-title fade">
+        <h2>Education</h2>
+        <p>Academic background</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item fade">
+
+          <div class="timeline-content">
+
+            <div class="school-box">
+
+              <div class="school-logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvaPyaFG8AVHpmmsm-VgKI2wYPDIIsFvjc9Q&s" alt="">
+              </div>
+
+              <div class="school-info">
+
+                <h3>Wardaya High School</h3>
+
+                <p>2025 - Present</p>
+
+                <p>Grade 10 High School</p>
+
+                <p>West Jakarta</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="timeline-item fade">
+
+          <div class="timeline-content">
+
+            <div class="school-box">
+
+              <div class="school-logo">
+                <img src="https://tse4.mm.bing.net/th/id/OIP.u_-hzQ7o7VErr5X1tB5H-QAAAA?pid=Api&h=220&P=0" alt="">
+              </div>
+
+              <div class="school-info">
+
+                <h3>Al-Taqwa International Islamic School</h3>
+
+                <p>2021 - 2024</p>
+
+                <p>Junior High School</p>
+
+                <p>Bogor Regency</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="timeline-item fade">
+
+          <div class="timeline-content">
+
+            <div class="school-box">
+
+              <div class="school-logo">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.kNkhzHixaHQnNOSpmsQDsAHaHa?pid=Api&h=220&P=0" alt="">
+              </div>
+
+              <div class="school-info">
+
+                <h3>Knowledge Link Intercultural School</h3>
+
+                <p>2018 - 2019</p>
+
+                <p>Primary School</p>
+
+                <p>Bogor Regency</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="timeline-item fade">
+
+          <div class="timeline-content">
+
+            <div class="school-box">
+
+              <div class="school-logo">
+                <img src="https://unihub.sekolahbogorraya.com/fe/images/logo-landscape.png" alt="">
+              </div>
+
+              <div class="school-info">
+
+                <h3>Sekolah Bogor Raya International School</h3>
+
+                <p>2016 - 2018</p>
+
+                <p>Primary School</p>
+
+                <p>Bogor City</p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- LANGUAGES -->
+
+  <section id="languages">
+
+    <div class="container">
+
+      <div class="section-title fade">
+        <h2>Languages</h2>
+        <p>Communication skills</p>
+      </div>
+
+      <div class="language-grid">
+
+        <div class="language-card fade">
+
+          <h3>🇬🇧 English</h3>
+
+          <p>Fluent</p>
+
+        </div>
+
+        <div class="language-card fade">
+
+          <h3>🇩🇪 German</h3>
+
+          <p>Intermediate</p>
+
+        </div>
+
+        <div class="language-card fade">
+
+          <h3>🇮🇩 Indonesian</h3>
+
+          <p>Native</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- HOBBIES -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title fade">
+        <h2>Hobbies & Interests</h2>
+        <p>Things I enjoy</p>
+      </div>
+
+      <div class="hobbies">
+
+        <div class="hobby fade">
+          🏀 Basketball
+        </div>
+
+        <div class="hobby fade">
+          🎥 Videography
+        </div>
+
+        <div class="hobby fade">
+          🌍 Cultural Exchange
+        </div>
+
+        <div class="hobby fade">
+          💻 Technology
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="section-title fade">
+        <h2>Contact</h2>
+        <p>Get in touch with me</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card fade">
+
+          <h3>
+            ✉️
+            Email
+          </h3>
+
+          <p>
+            muhammad.strong123@gmail.com
+          </p>
+
+        </div>
+
+        <div class="contact-card fade">
+
+          <h3>
+            📱
+            Phone
+          </h3>
+
+          <p>
+            +62 822-7725-3080
+          </p>
+
+        </div>
+
+        <div class="contact-card fade">
+
+          <h3>
+            📍
+            Location
+          </h3>
+
+          <p>
+            Bogor, Indonesia
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © 2026 Muhammad Marshal Reichherzer Putra
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const fadeElements = document.querySelectorAll('.fade');
+
+    const observer = new IntersectionObserver((entries)=>{
+
+      entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+
+      });
+
+    });
+
+    fadeElements.forEach(el=>{
+      observer.observe(el);
+    });
+
+  </script>
+
+</body>
+</html>
